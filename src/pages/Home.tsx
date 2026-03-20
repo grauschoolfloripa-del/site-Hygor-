@@ -1,8 +1,7 @@
 import { HeroBanner } from '../components/HeroBanner';
 import { ProductGrid } from '../components/ProductGrid';
 import { SecondaryBanner } from '../components/SecondaryBanner';
-import { Smile } from 'lucide-react';
-import { novoDropProducts, disponivelAgoraProducts, ultimasUnidadesProducts } from '../data/products';
+import { novoDropProducts, disponivelAgoraProducts } from '../data/products';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
@@ -24,10 +23,10 @@ export function Home() {
     <main className="flex-grow">
       <HeroBanner />
       
-      <div className="py-12 text-center bg-brand-cream border-b border-brand-sand/30 flex flex-col items-center justify-center gap-3">
-        <Smile className="h-5 w-5 text-brand-brown/40" strokeWidth={1.5} />
-        <p className="text-sm font-medium tracking-widest text-brand-brown/70 uppercase">
-          peças em pequena escala • cada drop é único
+      <div className="py-12 text-center bg-brand-cream border-b border-brand-sand/30 flex flex-col items-center justify-center gap-4">
+        <img src="/smile.png" alt="Smile" className="h-12 w-12 object-contain" />
+        <p className="text-sm font-medium tracking-widest text-brand-brown/80">
+          Nothing Better than comfy. Feito pra não querer tirar
         </p>
       </div>
 
@@ -48,15 +47,6 @@ export function Home() {
       </div>
 
       <SecondaryBanner />
-
-      <div id="ultimas">
-        <ProductGrid 
-          title="Últimas Unidades" 
-          subtitle="peças com estoque reduzido"
-          products={ultimasUnidadesProducts} 
-          bgColor="bg-brand-cream"
-        />
-      </div>
     </main>
   );
 }

@@ -13,7 +13,7 @@ export function ProductGrid({
 }) {
   return (
     <section className={`py-16 sm:py-24 ${bgColor}`}>
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-[1400px] px-4 sm:px-6">
         <div className="mb-12 text-center">
           <h2 className="text-2xl font-light tracking-widest text-brand-brown uppercase sm:text-3xl">
             {title}
@@ -25,7 +25,7 @@ export function ProductGrid({
           )}
         </div>
 
-        <div className="grid grid-cols-2 gap-x-4 gap-y-10 sm:grid-cols-3 lg:grid-cols-4 xl:gap-x-8">
+        <div className="grid grid-cols-2 gap-x-4 gap-y-10 sm:gap-x-6 md:grid-cols-3 lg:grid-cols-4 lg:gap-x-8">
           {products.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
